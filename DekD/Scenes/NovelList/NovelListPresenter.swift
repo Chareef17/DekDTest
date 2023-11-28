@@ -7,7 +7,8 @@
 //
 
 protocol NovelListPresentationLogic {
-    
+    func presentNovelList(response: NovelList.GetNovel.Response)
+
 }
 
 class NovelListPresenter {
@@ -18,5 +19,9 @@ class NovelListPresenter {
 }
 
 extension NovelListPresenter: NovelListPresentationLogic {
+    func presentNovelList(response: NovelList.GetNovel.Response) {
+        self.viewController?.displayNovelList(viewModel: .init(novels: response.novels))
+    }
+    
     
 }

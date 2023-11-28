@@ -9,7 +9,7 @@
 import UIKit
 
 protocol NovelListBusinessLogic {
-    func getNovelList()
+    func getNovelList(request: NovelList.GetNovel.Request)
 }
 
 protocol NovelListDataStore {
@@ -24,7 +24,12 @@ class NovelListInteractor: NovelListDataStore {
 }
 
 extension NovelListInteractor: NovelListBusinessLogic {
-    func getNovelList() {
-        NovelListService.shared.requestNovelList(page: 1)
+    func getNovelList(request: NovelList.GetNovel.Request) {
+        NovelListService.shared.requestNovels(page: request.pageIndex) { [weak self] novelList in
+            self?.presenter?.presentNovelList(response: .init(novels: novelList))
+        } completionError: { error in
+            
+        }
+
     }
 }

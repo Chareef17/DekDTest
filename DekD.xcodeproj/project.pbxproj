@@ -117,7 +117,7 @@
 				63CB315A2B0FC1AA002DB7A8 /* RootController */,
 				63CB31532B0FA0D0002DB7A8 /* Extension */,
 				63F50BE32B0E70C60091FFE6 /* Core */,
-				63F50BD32B0E6BA20091FFE6 /* Controller */,
+				63F50BD32B0E6BA20091FFE6 /* Scenes */,
 				63F50BB12B0CE3B00091FFE6 /* AppDelegate.swift */,
 				63F50BB32B0CE3B00091FFE6 /* SceneDelegate.swift */,
 				63F50BB72B0CE3B00091FFE6 /* Main.storyboard */,
@@ -128,12 +128,12 @@
 			path = DekD;
 			sourceTree = "<group>";
 		};
-		63F50BD32B0E6BA20091FFE6 /* Controller */ = {
+		63F50BD32B0E6BA20091FFE6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				63F50BD42B0E6BAF0091FFE6 /* NovelList */,
 			);
-			path = Controller;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		63F50BD42B0E6BAF0091FFE6 /* NovelList */ = {

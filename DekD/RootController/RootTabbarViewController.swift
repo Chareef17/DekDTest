@@ -14,7 +14,6 @@ class RootTabbarViewController: UITabBarController {
 
         // Do any additional setup after loading the view.
         self.initTabbar()
-        self.hidden
     }
     
     private func initTabbar() {

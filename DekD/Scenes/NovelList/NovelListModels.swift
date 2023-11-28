@@ -8,18 +8,18 @@
 
 enum NovelList {
   
-    enum Something {
+    enum GetNovel {
         
         struct Request {
-            
+            let pageIndex: Int
         }
         
         struct Response {
-            
+            let novels: NovelListModel
         }
         
         struct ViewModel {
-            
+            let novels: NovelListModel
         }
         
     }

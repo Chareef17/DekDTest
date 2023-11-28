@@ -14,7 +14,6 @@ class BaseService {
     enum HTTPMethod: String {
         case get = "GET"
         case post = "POST"
-        // Add other HTTP methods as needed
     }
     
     // Function to get API response with customizable parameters
@@ -53,7 +52,7 @@ class BaseService {
             
             // Ensure there is data
             guard let responseData = data else {
-                let error = NSError(domain: "YourApp", code: 400, userInfo: [NSLocalizedDescriptionKey: "No data received"])
+                let error = NSError(domain: "DekD", code: 400, userInfo: [NSLocalizedDescriptionKey: "No data received"])
                 completion(.failure(error))
                 return
             }

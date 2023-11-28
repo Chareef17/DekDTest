@@ -17,7 +17,9 @@ class NovelListService {
     }
     
     // Your class functions and properties go here
-    func requestNovelList(page: Int) {
+    func requestNovels(page: Int,
+                       completion: @escaping (NovelListModel) -> Void?,
+                       completionError: @escaping (Error) -> Void?) {
         let service = BaseService()
 
         // Replace the URL, HTTP method, parameters, headers, and the expected data model type
@@ -30,9 +32,11 @@ class NovelListService {
             case .success(let data):
                 // Handle successful API response
                 print("API response data: \(data)")
+                completion(data)
             case .failure(let error):
                 // Handle API request error
                 print("API request error: \(error)")
+                completionError(error)
             }
         }
     }
